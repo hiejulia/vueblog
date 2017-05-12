@@ -11,40 +11,32 @@
       </div>
     </div>
   </div>
-</template>
-
-
 
      <transition name="fade">
      
       
      </transition>
      
-   </div>
 </template>
 
 
-<!--template with jade -->
-<!--
-<template lang="jade">
-  div#app.container
-    h2
-      span {{ 'Shopping choices' | uppercase | addspace }}
-      controls-component
-    state-title-component(v-bind:isworking='isworking')
-    countdown-component
-    kittens-component(v-show="!isworking" transition="fade")
-</template>
--->
+
+
+
+
+
 
 <script>
 import ShoppingListComponent from './components/ShoppingListComponent'
+import ShoppingListTitleComponent from './components/ShoppingListTitleComponent'
+import _ from 'underscore'
 
   /* eslint-disable no-new */
 
 export default {
     components: {
-      ShoppingListComponent
+      ShoppingListComponent,
+      ShoppingListTitleComponent
     },
     data () {
       return {
@@ -60,6 +52,11 @@ export default {
             items: [{ text: 'black dress', checked: false }, { text: 'all stars', checked: false }]
           }
         ]
+      }
+    },
+    methods: {
+       onChangeTitle (id, text) {
+        _.findWhere(this.shoppinglists, { id: id }).title = text
       }
     }
   }
