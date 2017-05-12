@@ -14,11 +14,11 @@ export default {
     },
     //add new shopping list
     addNewShoppingList: (data) => {
-    return ShoppingListsResource.save(data)
+    return ShoppingListsResource.save(data)//add > save data
   },
   //update shopping list
   updateShoppingList: (data) => {
-    return ShoppingListsResource.update({ id: data.id }, data)
+    return ShoppingListsResource.update({ id: data.id }, data)//update shopping list dbt by id 
   },
   //delete shopping list
   deleteShoppingList: (id) => {

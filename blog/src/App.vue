@@ -12,10 +12,7 @@
     </div>
   </div>
 
-     <transition name="fade">
-     
-      
-     </transition>
+   
      
 </template>
 
