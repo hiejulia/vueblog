@@ -15,9 +15,12 @@
         <shopping-list-component :id="list.id" :title="list.title" :items="list.items"></shopping-list-component>
       </div>
     </div>
+    <md-toolbar>
+    <h1 class="md-title">My Title</h1>
+  </md-toolbar>
+   
   </div>
 
-   
      
 </template>
   
@@ -27,6 +30,12 @@
   import store from './vuex/store'
   import { mapGetters, mapActions } from 'vuex'
   import _ from 'underscore'
+
+  import Vue from 'vue'
+import VueMaterial from 'vue-material'
+import 'vue-material/dist/vue-material.css'
+
+Vue.use(VueMaterial)
 
   /* eslint-disable no-new */
 
