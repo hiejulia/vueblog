@@ -22,3 +22,4 @@ new Vue({
   el: '#container',
   components: {App}
 })
+
