@@ -1,7 +1,7 @@
 <template>
   <div id="container">
     <p>This is App1 Component</p>
-    <story v-bind:story="{plot:'a',writer:'b'}">
+    <story v-bind:story="{plot:'a',writer:'b'}" >
     </story>
     
   </div>

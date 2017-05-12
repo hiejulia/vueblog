@@ -1,4 +1,4 @@
-<template>
+<template :style="niceStyle">
   <div id="app">
     <img src="./assets/logo.png">
     
@@ -8,6 +8,7 @@
 
 <script>
 export default {
+  /* eslint-disable no-new */
   name: 'app'
 }
 </script>

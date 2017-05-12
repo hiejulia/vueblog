@@ -10,12 +10,23 @@ Vue.config.productionTip = false
 /* eslint-disable no-new */
 Vue.component('story', {
   template: '#story-template',
-  props: ['story']
+  props: ['story'],
+  methods: {},
+  computed: {
+
+  }
 })
 
 new Vue({
   el: '#app',
   router,
+  data: {
+    niceStyle:
+    {
+      color: 'red',
+      fontSize: '50px'
+    }
+  },
   template: '<App/>',
   components: { App }
 })
