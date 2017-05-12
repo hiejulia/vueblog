@@ -10,24 +10,25 @@
 </template>
 
 <script>
-  export default {
-    data() {
-        return {
-            newItem: ''
-        }
+  
+    export default {
+    props: ['id'],
+    data () {
+      return {
+        newItem: ''
+      }
     },
     methods: {
-        addItem() {
-            var text = this.newItem.trim();
-            if(text) {
-                this.$emit('add',this.newItem);
-                this.newItem= '';
-            }
+      addItem () {
+        var text
+        text = this.newItem.trim()
+        if (text) {
+          this.$emit('add', this.newItem)
+          this.newItem = ''
+          this.$store.dispatch('updateList', this.id)
         }
+      }
     }
-
-
-
   }
 </script>
 

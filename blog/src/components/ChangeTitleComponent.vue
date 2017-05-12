@@ -1,20 +1,19 @@
 <template>
   <div>
     <em>Change title</em>
-    <input type="text" placeholder="Type the changed title here" :value="value" @input="onInput">
+    <input type="text" placeholder="Type the changed title here" :value="value" @input="onInput({ title: $event.target.value, id: id })">
   </div>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
   export default {
-     props: ['value],
-     methods: {
-         onInput(event) {
-             this.$emit('input',event.target.value)
-
-         }
-     }
+    props: ['title', 'id'],
+    methods: mapActions({
+      onInput: 'changeTitle'
+    })
   }
+  
 </script>
 
 <style scoped>
