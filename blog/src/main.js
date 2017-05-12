@@ -2,38 +2,27 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import App1 from './App1'
 import router from './router'
-
-Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 Vue.component('story', {
   template: '#story-template',
-  props: ['story'],
-  methods: {},
-  computed: {
+  props: ['story']
+})
 
-  }
+Vue.filter('famous', function (x) {
+  return x.filter(function (item) {
+    return item.upvotes > 20
+  })
 })
 
 new Vue({
   el: '#app',
   router,
   data: {
-    niceStyle:
-    {
-      color: 'red',
-      fontSize: '50px'
-    }
+    message: 'Greetings your Majesty!',
+    show: false
   },
   template: '<App/>',
   components: { App }
-})
-
-new Vue({
-  el: '#container',
-  router,
-  template: '<App1/>',
-  components: { App1 }
 })

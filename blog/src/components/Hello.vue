@@ -1,13 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{msg1}}</h1>
-   
-    <div>
-      <p v-for="story in stories ">
-      {{index}}- {{story.plot}} - {{story.writer}} - {{story.upvotes}}</p><br>
     </div>
-  
-  </div>
 </template>
 
 <script>
