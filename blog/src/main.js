@@ -70,4 +70,14 @@ new Vue({
       }
     }
   }
-});
+})
+
+//first custom filter 
+Vue.filter('addspace', (value) => {
+  return value + ' ';
+})
+
+//fiter to uppercase
+Vue.filter('uppercase', (value) => {
+  return value.toUpperCase();
+})
