@@ -54,6 +54,19 @@
    </div>
 </template>
 
+
+<!--template with jade -->
+<template lang="jade">
+  div#app.container
+    h2
+      span {{ 'Shopping choices' | uppercase | addspace }}
+      controls-component
+    state-title-component(v-bind:isworking='isworking')
+    countdown-component
+    kittens-component(v-show="!isworking" transition="fade")
+</template>
+
+
 <script>
 import AddItemComponent from './components/AddItemComponent'
 import ItemsComponent from './components/ItemsComponent'
