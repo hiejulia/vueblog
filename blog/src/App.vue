@@ -13,7 +13,7 @@
      <transition name="fade">
      
       
-     </transitin>
+     </transitiofixn>
      
    </div>
 </template>
