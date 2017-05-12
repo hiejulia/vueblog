@@ -2,14 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>blog</title>
+    <title>blogappvue</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
 <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body>
     <div id="app"></div>
     <div id="container">
-      
+      <template id="story-template">
+        <h1>{{ story.writer }} said {{ story.plot }}</h1>
+    </template>
     </div>
 
 
