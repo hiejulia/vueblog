@@ -1,9 +1,9 @@
-<template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <h1 v-if="message">{{message}}</h1>
-    <router-view></router-view>
-  </div>
+ <template>
+   <div id="app">
+     <img src="./assets/logo.png">
+     <h1>{{title}}</h1>
+     
+   </div>
 </template>
 
 <script>
