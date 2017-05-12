@@ -1,38 +1,47 @@
 {
-    "shoppinglists": [
+  "shoppinglists": [
+    {
+      "title": "dfadfdfs",
+      "items": [
         {
-            "title": "news",
-            "items": [
-                {
-                    "text": "asd",
-                    "checked": true
-                },
-                {
-                    "text": "hkhjkj",
-                    "checked": true
-                }
-            ],
-            "id": "1"
+          "text": "asd",
+          "checked": false
         },
         {
-            "title": "MERDA",
-            "items": [],
-            "id": 3
+          "text": "hkhjkj",
+          "checked": false
         },
         {
-            "title": "MERDA",
-            "items": [],
-            "id": 4
-        },
-        {
-            "title": "New Shopping List",
-            "items": [],
-            "id": 5
-        },
-        {
-            "title": "New Shopping List",
-            "items": [],
-            "id": 6
+          "text": "dadfa",
+          "checked": false
         }
-    ]
+      ],
+      "id": "1"
+    },
+    {
+      "title": "MERDA",
+      "items": [],
+      "id": 3
+    },
+    {
+      "title": "MERDA",
+      "items": [],
+      "id": 4
+    },
+    {
+      "title": "New Shopping List",
+      "items": [],
+      "id": 5
+    },
+    {
+      "title": "New Shopping List",
+      "items": [],
+      "id": 6
+    },
+    {
+      "title": "New Shopping List",
+      "items": [],
+      "id": 7
+    }
+  ]
 }
