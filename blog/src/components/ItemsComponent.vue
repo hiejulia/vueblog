@@ -1,5 +1,6 @@
 <template>
   <div>
+    <a @click="sort">Sort</a>
     <item-component v-for="item in items" :item="item" :id="id"></item-component>
   </div>
 </template>
