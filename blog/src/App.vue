@@ -1,5 +1,6 @@
  <template>
    <div id="app" class="container">
+     <h1>{{title | capitalize}}</h1>
     <ul class="nav nav-tabs" role="tablist">
       <li :class= "index===0 ? 'active' : ''" v-for="(list, index) in shoppinglists" role="presentation">
        <shopping-list-title-component :id="list.id" :title="list.title"></shopping-list-title-component>
@@ -18,7 +19,16 @@
     <md-toolbar>
     <h1 class="md-title">My Title</h1>
   </md-toolbar>
-   
+  <!-- basic -->
+    
+    <icon name="refresh" spin scale="3"></icon>
+    
+    
+    <br>
+    <!-- stacked icons -->
+    
+    
+    
   </div>
 
      
@@ -47,11 +57,20 @@ Vue.material.registerTheme({
     primary: 'teal'
   }
 })
-
+Vue.filter('capitalize', function (string) {
+      var capitalFirst = string.charAt(0).toUpperCase()
+      var noCaseTail = string.slice(1, string.length)
+      return capitalFirst + noCaseTail
+    })
 
   /* eslint-disable no-new */
 
 export default {
+  data () {
+return {
+  title:'shopping app'
+}
+  },
     components: {
       ShoppingListComponent,
       ShoppingListTitleComponent
