@@ -1,9 +1,12 @@
  <template>
    <div id="app" class="container">
+     <h2>{{advice}}</h2>
      <transition name="fade" enter-active-class="go" enter-class="mySlideInRight">
          
           <h1 v-show="!showSolution">{{title | capitalize}} - 🚕</h1>
+          
         </transition>
+        <tutorial-component></tutorial-component>
      
     <ul class="nav nav-tabs" role="tablist">
       <li :class= "index===0 ? 'active' : ''" v-for="(list, index) in shoppinglists" role="presentation">
@@ -41,6 +44,7 @@
 <script>
   import ShoppingListComponent from './components/ShoppingListComponent'
   import ShoppingListTitleComponent from './components/ShoppingListTitleComponent'
+  import TutorialComponent from './components/TutorialComponent'
   import store from './vuex/store'
   import { mapGetters, mapActions } from 'vuex'
   import _ from 'underscore'
@@ -74,13 +78,15 @@ export default {
 return {
   title:'shopping app',
   
-        showSolution: false
+        showSolution: false,
+        advice:'loading...'
       
 }
   },
     components: {
       ShoppingListComponent,
-      ShoppingListTitleComponent
+      ShoppingListTitleComponent,
+      TutorialComponent
     },
     computed:mapGetters({
       shoppinglists: 'getLists'
@@ -97,6 +103,15 @@ return {
     store,//get the store of shopping list 
     mounted () {
       this.populateShoppingLists()
+    },
+    created(){
+      axios.get('http://api.adviceslip.com/advice')
+        .then(res => {
+          this.advice = res.data.slip.advice;
+        })
+        .catch(error => {
+            this.advice = 'There was an error: ' + error.message
+          })
     }
   }
 </script>
