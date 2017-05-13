@@ -13,7 +13,9 @@ export default {
     },
 //fetch shopping lists
     [types.POPULATE_SHOPPING_LISTS] (state, lists) {
-    state.shoppinglists = lists
+    state.shoppinglists = lists.sort((d1,d2) => {
+      (d1.id - d2.id) 
+    })
   },
   //add new shopping list
   [types.ADD_SHOPPING_LIST] (state, newList) {

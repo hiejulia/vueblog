@@ -2,7 +2,24 @@
   "shoppinglists": [
     {
       "title": "MERDA",
-      "items": [],
+      "items": [
+        {
+          "text": "dafadsfs",
+          "checked": false
+        },
+        {
+          "text": "aaa",
+          "checked": false
+        },
+        {
+          "text": "dbbb",
+          "checked": false
+        },
+        {
+          "text": "nnw",
+          "checked": false
+        }
+      ],
       "id": 4
     },
     {
