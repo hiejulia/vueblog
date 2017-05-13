@@ -1,6 +1,10 @@
  <template>
    <div id="app" class="container">
-     <h1>{{title | capitalize}}</h1>
+     <transition name="fade">
+         
+          <h1 v-show="showSolution">{{title | capitalize}}</h1>
+        </transition>
+     
     <ul class="nav nav-tabs" role="tablist">
       <li :class= "index===0 ? 'active' : ''" v-for="(list, index) in shoppinglists" role="presentation">
        <shopping-list-title-component :id="list.id" :title="list.title"></shopping-list-title-component>
@@ -101,5 +105,14 @@ return {
     width: 40%;
     margin: 20px auto 0px auto;
   }
+  .fade-enter-active {
+      transition: opacity .5s;
+      opacity: 1
+    }
+    
+    .fade-enter {
+      opacity: 0
+    }
+    
 </style>
 

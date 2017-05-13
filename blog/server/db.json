@@ -24,7 +24,12 @@
     },
     {
       "title": "New Shopping List",
-      "items": [],
+      "items": [
+        {
+          "text": "aa",
+          "checked": false
+        }
+      ],
       "id": 5
     },
     {

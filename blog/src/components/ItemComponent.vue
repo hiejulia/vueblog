@@ -8,7 +8,7 @@
       <label>
         <textarea 
          v-model="txtAra"
-        :class="{ warn: longText }"
+        :class="{ warn: showme }"
         :maxlength="limit">
    </textarea>
       </label>
@@ -23,7 +23,8 @@
     props: ['item', 'id'],
     data() {
       return {
-    txtAra : 'What if I told you CSS could do that',
+    txtAra : 'This is the textarea',
+    showme:false,
 		limit : 50
       }
    
