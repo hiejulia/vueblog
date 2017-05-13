@@ -4,6 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.css'
+import 'vue-awesome/icons'
+import Icon from 'vue-awesome/components/Icon'
+
+// globally (in your main .js file)
+Vue.component('icon', Icon)
 Vue.use(VueMaterial)
 
 Vue.material.registerTheme({
