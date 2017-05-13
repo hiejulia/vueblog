@@ -36,6 +36,18 @@ import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.css'
 
 Vue.use(VueMaterial)
+Vue.material.registerTheme({
+  app: {
+    primary: 'cyan'
+  },
+  about: {
+    primary: 'indigo'
+  },
+  contact: {
+    primary: 'teal'
+  }
+})
+
 
   /* eslint-disable no-new */
 
