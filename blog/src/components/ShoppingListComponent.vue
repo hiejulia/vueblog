@@ -1,6 +1,13 @@
 <template>
 <div>
-<h2>{{ title }}</h2>
+  <transition
+    @enter="enter"
+    @leave="leave"
+    :css="false"
+  >
+    <h2>{{ title }}</h2>
+  </transition>
+
     <add-item-component @add="addItem" :id="id"></add-item-component>
     <items-component :items="items" :id="id"></items-component>
     <div class="footer">
@@ -33,7 +40,17 @@
           text: text,
           checked: false
         })
-      }
+      },
+      enter (el, done) {
+      Velocity(el, 
+      { opacity: [1, 0], translateX: ["0px", "200px"] },
+      { duration: 2000, easing: "ease-out", complete: done })
+    },
+    leave (el, done) {
+    	Velocity(el,
+      { opacity: [0, 1], 'font-size': ['0.1em', '1em'] },
+      { duration: 200, complete: done })
+    }
     }
   }
 </script>
