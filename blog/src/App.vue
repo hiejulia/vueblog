@@ -2,7 +2,7 @@
    <div id="app" class="container">
      <transition name="fade">
          
-          <h1 v-show="!showSolution">{{title | capitalize}}</h1>
+          <h1 v-show="!showSolution">{{title | capitalize}} - 🚕</h1>
         </transition>
      
     <ul class="nav nav-tabs" role="tablist">
