@@ -1,6 +1,6 @@
  <template>
    <div id="app" class="container">
-     <transition name="fade">
+     <transition name="fade" enter-active-class="go" enter-class="mySlideInRight">
          
           <h1 v-show="!showSolution">{{title | capitalize}} - 🚕</h1>
         </transition>
@@ -115,6 +115,32 @@ return {
     
     .fade-enter {
       opacity: 0
+    }
+
+    .go {
+      transition: all 2s ease-out;
+      animation: rumble .5s linear 4;
+    }
+
+    @keyframes rumble {
+      10% {
+        margin-top: 20px
+      }
+      20% {
+        margin-top: 15px
+      }
+      30% {
+        margin-top: 20px
+      }
+      40% {
+        margin-top: 15px
+      }
+      100% {
+        margin-top: none
+      }
+    }
+    .mySlideInRight {
+      transform: translateX(200px);
     }
     
 </style>
