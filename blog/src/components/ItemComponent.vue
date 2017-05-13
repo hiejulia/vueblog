@@ -5,6 +5,14 @@
       <label>
         <input type="checkbox" v-model="item.checked"> {{ item.text }}
       </label>
+      <label>
+        <textarea 
+         v-model="txtAra"
+        :class="{ warn: longText }"
+        :maxlength="limit">
+   </textarea>
+      </label>
+
     </div>
   </li>
 </template>
@@ -13,6 +21,13 @@
    import { mapActions } from 'vuex'
   export default {
     props: ['item', 'id'],
+    data() {
+      return {
+    txtAra : 'What if I told you CSS could do that',
+		limit : 50
+      }
+   
+    },
     methods: mapActions(['updateList']),
     watch: {
       'item.checked': function () {
@@ -34,5 +49,9 @@
   }
   li span {
     margin-left: 5px;
+  }
+
+  .warn{
+    background-color: mistyrose
   }
 </style>
