@@ -2,7 +2,7 @@
    <div id="app" class="container">
      <transition name="fade">
          
-          <h1 v-show="showSolution">{{title | capitalize}}</h1>
+          <h1 v-show="!showSolution">{{title | capitalize}}</h1>
         </transition>
      
     <ul class="nav nav-tabs" role="tablist">
@@ -72,7 +72,10 @@ Vue.filter('capitalize', function (string) {
 export default {
   data () {
 return {
-  title:'shopping app'
+  title:'shopping app',
+  
+        showSolution: false
+      
 }
   },
     components: {
