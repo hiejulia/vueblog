@@ -28,6 +28,15 @@
 <script>
 
   export default {
+    props:{
+      name:{
+        type:String,
+        required:true,
+        validator(text) {
+          return text.length >2
+        }
+      }
+    },
    data() {
        return {
            greeting: 'Welcome to your Vue.js app!',
