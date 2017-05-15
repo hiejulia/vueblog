@@ -8,7 +8,7 @@ import moment from 'moment';
 import BootstrapVue from 'bootstrap-vue/dist/bootstrap-vue.esm'
 import VueAuth from '@websanova/vue-auth'
 import VeeValidate from 'vee-validate'
-import Resource from 'vue-resource';
+// import Resource from 'vue-resource';
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -23,7 +23,7 @@ Vue.use(VueAxios, axios);
 Vue.use(BootstrapVue);
 
 Vue.use(VeeValidate);
-Vue.use(Resource);
+// Vue.use(Resource);
 Vue.use(Router);
 
 // Routes
