@@ -19,13 +19,12 @@
                             </li>
                         </ul>
                     </div>
-                    <real-world-post-preview v-for="(article, index) in articles" v-bind:article="article" v-bind:index="index" v-bind:key="article.title">
-                    </real-world-post-preview>
+                  
                 </div>
                 <div class="col-md-3">
                     <div class="sidebar">
                         <p>Popular Tags</p>
-                        <real-world-tag-list v-bind:tags="tags"></real-world-tag-list>
+                       
                     </div>
                 </div>
             </div>
@@ -52,8 +51,7 @@
     
         },
         components: {
-            RealWorldPostPreview,
-            RealWorldTagList,
+          
         },
     };
 </script>

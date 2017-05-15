@@ -1,29 +1,21 @@
-import Vue from 'vue'
-import App from './App'
-// import router from './router'
+import Vue from 'vue';
 import Router from 'vue-router';
-import axios from 'axios';
-import VueAxios from 'vue-axios';
-import moment from 'moment';
-import BootstrapVue from 'bootstrap-vue/dist/bootstrap-vue.esm'
-import VueAuth from '@websanova/vue-auth'
-import VeeValidate from 'vee-validate'
-// import Resource from 'vue-resource';
+import Resource from 'vue-resource';
+import App from './App';
+import VeeValidate from 'vee-validate';
 
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+// Import components
+import Register from './components/Register.vue';
+import Hello from './components/Hello.vue';
+import Login from './components/Login.vue';
 
-//auth
-import auth from './auth/auth'
+
+//Auth Setup
+// Check the user's auth status when the app starts
+import auth from './auth'
 auth.checkAuth();
-//store
-// import store from './store';
-
-Vue.use(VueAxios, axios);
-Vue.use(BootstrapVue);
-
 Vue.use(VeeValidate);
-// Vue.use(Resource);
+Vue.use(Resource);
 Vue.use(Router);
 
 // Routes
@@ -33,7 +25,13 @@ export var router = new Router({
 		{ path: '/', component: Hello },
 		// { path: '/users', component: Users, meta: { requiresAuth: true, requiresAdmin: true } },
 		{ path: '/register', component: Register, meta: { checksAuth: true } },
-		{ path: '/login', component: Login, meta: { checksAuth: true } }
+		{ path: '/login', component: Login, meta: { checksAuth: true } },
+		// { path: '/notes', component: Notes },
+		// { path: '/verify', component: Verify },
+		// { path: '/forgotpassword', component: ForgotPassword },	
+		// { path: '/reset/:token', component: ResetPassword },	
+		// { path: '/verify/:id/:token', component: Verify },
+		// { name: 'noteSingle', path: '/notes/:id', component: NoteSingle }
 	]
 });
 
@@ -45,7 +43,8 @@ Vue.http.headers.common['Access-Control-Allow-Origin'] = '*';
 //Protect authenticated routes with Route Meta tags.
 router.beforeEach((to, from, next) => {
 	if (to.matched.some(record => record.meta.requiresAuth)) {
-
+		// this route requires auth, check if logged in
+		// if not, redirect to login page.
 		if (!auth.user.authenticated) {
 			next({
 				path: '/login',
@@ -57,7 +56,8 @@ router.beforeEach((to, from, next) => {
 	}
 	if (to.matched.some(record => record.meta.requiresAdmin)) {
 		console.log(auth.user);
-		
+		// this route requires auth, check if logged in
+		// if not, redirect to login page.
 		if (auth.user.role == 'admin') {
 			next()
 		} else {
@@ -68,7 +68,8 @@ router.beforeEach((to, from, next) => {
 		}
 	}
 	if (to.matched.some(record => record.meta.checksAuth)) {
-	
+		// this route requires auth, check if logged in
+		// if not, redirect to login page.
 		if (auth.user.authenticated) {
 			next({
 				path: '/',
@@ -82,18 +83,8 @@ router.beforeEach((to, from, next) => {
 	}
 })
 
-
-
-//filter for date
-Vue.filter('date', date => moment(date).format('MMMM DD, YYYY'));
-
-Vue.config.productionTip = false
-
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  template: '<App/>',
-  components: { App }
-  // store
-})
+//Build app into #app div
+const app = new Vue({
+	router,
+	render: (h) => h(App)
+}).$mount('#app')

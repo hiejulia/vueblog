@@ -14,9 +14,7 @@
       <li class="nav-item">
         <router-link to="/register" v-if="!user.authenticated"><a class="nav-link">Register</a></router-link>
       </li>
-      <li class="nav-item">
-        <router-link to="/users" v-if="user.authenticated && user.role == 'admin'"><a class="nav-link">Admin</a></router-link>
-      </li>
+      
       <li class="nav-item">
         <a href="#" @click="logout()" v-if="user.authenticated" class="nav-link">Log Out</a>
       </li>

@@ -1,35 +1,24 @@
 <template>
   <div id="app">
-    <header-component />
+    <navbar></navbar>
     <router-view></router-view>
-    <footer-component />
   </div>
 </template>
 
 <script>
-//import components
-import HeaderComponent from '@/components/Header';
-import FooterComponent from '@/components/Footer';
-import LoginComponent from '@/components/Login';
-
+import Navbar from './components/Navbar.vue';
 export default {
-  name: 'app',
   components: {
-    HeaderComponent, FooterComponent
-  },
+    Navbar,
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-
+html, p, h1, h2, h3, h4, h5, a {
+    font-family: 'Noto Sans', sans-serif !important;
 }
-
-
-
+.container {
+  padding-top: 2%;
+}
 </style>
