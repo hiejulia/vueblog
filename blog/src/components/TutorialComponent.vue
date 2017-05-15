@@ -2,6 +2,7 @@
   <div>
       <img src="https://vuejs.org/images/logo.png" alt="Vue logo">
     <h1>{{ greeting }}</h1>
+    <p>{{titlename}}</p>
     <ul>
       <li>
         To learn more about Vue, visit
@@ -29,7 +30,7 @@
 
   export default {
     props:{
-      name:{
+      titlename:{
         type:String,
         required:true,
         validator(text) {

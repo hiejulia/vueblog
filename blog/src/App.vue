@@ -6,7 +6,7 @@
           <h1 v-show="!showSolution">{{title | capitalize}} - 🚕</h1>
           
         </transition>
-        <tutorial-component></tutorial-component>
+        <tutorial-component :titlename="title"></tutorial-component>
      
     <ul class="nav nav-tabs" role="tablist">
       <li :class= "index===0 ? 'active' : ''" v-for="(list, index) in shoppinglists" role="presentation">
@@ -157,6 +157,15 @@ return {
     .mySlideInRight {
       transform: translateX(200px);
     }
+      .fade-enter-active, .fade-leave-active {
+  transition: transform .5s
+}
+.fade-enter {
+  transform: translateX(300px)
+}
+.fade-leave-active {
+  transform: translateX(-300px);
+}
     
 </style>
 
