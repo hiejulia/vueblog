@@ -10,7 +10,7 @@
 </template>
 <script>
   export default {
-    name: 'FooterComponent',
+    name: 'FooterComponent'
   };
 </script>
 <style scoped>

@@ -3,7 +3,7 @@
     <header-component />
     
     <router-view></router-view>
-    <footer />
+    <footer-component />
   </div>
 </template>
 

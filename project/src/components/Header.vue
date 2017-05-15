@@ -9,7 +9,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="">Sign up</a>
+          <a class="nav-link"  v-link="'login'">Login</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="">Settings</a>
