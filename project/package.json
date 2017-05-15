@@ -18,6 +18,7 @@
     "bootstrap": "^3.3.7",
     "bootstrap-vue": "^0.15.8",
     "moment": "^2.18.1",
+    "vee-validate": "^2.0.0-rc.3",
     "vue": "^2.2.6",
     "vue-axios": "^2.0.2",
     "vue-router": "^2.3.1",

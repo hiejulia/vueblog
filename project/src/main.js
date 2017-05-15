@@ -6,11 +6,16 @@ import router from './router'
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 import moment from 'moment';
-import BootstrapVue from 'bootstrap-vue/dist/bootstrap-vue.esm';
+import BootstrapVue from 'bootstrap-vue/dist/bootstrap-vue.esm'
 import VueAuth from '@websanova/vue-auth'
+import VeeValidate from 'vee-validate'
 
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap-vue/dist/bootstrap-vue.css';
+
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+//auth
+import auth from './auth/auth'
 
 //store
 // import store from './store';

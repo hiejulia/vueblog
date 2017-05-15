@@ -37,7 +37,7 @@ export default {
 			})
 			.then(response => {
 				if (response.data.success == true) {
-					context.$router.push('/verify');				
+					// context.$router.push('/verify');				
 				};
 			})
 			.catch(function(error) {
