@@ -3,6 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import axios from 'axios';
+import VueAxios from 'vue-axios';
+import moment from 'moment';
+import BootstrapVue from 'bootstrap-vue/dist/bootstrap-vue.esm';
 
 Vue.config.productionTip = false
 
