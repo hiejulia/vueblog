@@ -1,6 +1,6 @@
 <template>
   <div>
-      <img src="https://vuejs.org/images/logo.png" alt="Vue logo">
+      
     <h1>{{ greeting }}</h1>
     <p>{{titlename}}</p>
     <ul>
