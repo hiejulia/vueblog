@@ -11,7 +11,7 @@
           type="text" 
           class="form-control"
           placeholder="Enter your email"
-          v-model="credentials.username"
+          
         >
       </div>
       <div class="form-group">
@@ -19,17 +19,17 @@
           type="password"
           class="form-control"
           placeholder="Enter your password"
-          v-model="credentials.password"
+         
         >
       </div>
-      <button class="btn btn-primary" @click="submit()">Login</button>
+      <button class="btn btn-primary" >Login</button>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'LoginComponent',
+  name: 'Login',
 };
 </script>
 

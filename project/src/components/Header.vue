@@ -9,7 +9,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"  v-link="'login'">Login</a>
+          <a class="nav-link">Login</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="">Settings</a>
@@ -24,8 +24,10 @@
 </template>
 
 <script>
+import LoginComponent from '@/components/Login';
 export default {
   name: 'HeaderComponent',
+  component:'LoginComponent'
 };
 </script>
 

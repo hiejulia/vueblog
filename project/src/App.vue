@@ -11,6 +11,7 @@
 //import components
 import HeaderComponent from '@/components/Header';
 import FooterComponent from '@/components/Footer';
+import LoginComponent from '@/components/Login';
 
 export default {
   name: 'app',
