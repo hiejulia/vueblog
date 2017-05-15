@@ -16,7 +16,13 @@ export default new Router({
       path: '/login',
       name: 'Login',
       component: Login
-    }
+    },
+  
+    { path: '/editor/:id', name: 'edit-article', component: Editor },
+    { path: '/article/:id', name: 'article', component: Article },
+    { path: '/profile/:username', name: 'user', component: Profile },
+    { path: '/article/:username/favorites', name: 'favorites', component: Favorites },
+    { path: '*', redirect: { name: 'home' } },
 
   ]
 })
