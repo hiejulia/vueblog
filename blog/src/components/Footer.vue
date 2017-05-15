@@ -9,3 +9,9 @@
     color: $red; 
   } 
 </style> 
+
+
+<script lang="coffee"> 
+ exports.default = data: -> 
+ { msg: 'Hello!' } 
+</script> 
