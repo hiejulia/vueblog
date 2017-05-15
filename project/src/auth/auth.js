@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export default {
     user: {
 		authenticated: false,
@@ -5,7 +7,7 @@ export default {
 	},
     login(context, creds, redirect){
         var self = this;
-        context.$http.post('http://localhost:3000/auth/login',{
+        context.axios.post('http://localhost:3000/auth/login',{
             email: creds.email,
 			password: creds.password
         })
@@ -30,7 +32,7 @@ export default {
 
     },
     register(context, creds, redirect){
-        context.$http.post('http://localhost:3000/auth/register', {
+        context.axios.post('http://localhost:3000/auth/register', {
 				email: creds.email,
 				name:creds.name,
 				password: creds.password
