@@ -12,6 +12,7 @@ export default {
 			.then(response => {
 				localStorage.setItem('id_token', response.data.token);
 				localStorage.setItem('user_role', response.data.role);
+                console.log(response);
 				self.user = {role:response.data.role};
 				self.user.authenticated = true;
 				location.reload();
@@ -26,6 +27,7 @@ export default {
 				console.log(error);
 				context.error = error.body.error;
 			});
+            
 	},
 	signup(context, creds, redirect) {
 		context.$http.post('auth/register', {
