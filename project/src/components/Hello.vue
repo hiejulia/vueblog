@@ -3,7 +3,7 @@
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
         <h1 class="display-3">Vue.js Boilerplate</h1>
-        <p class="lead">Vue + Passport + Express + Postgres</p>
+        <p class="lead">Vue + Passport + Express + MongoDB</p>
       </div>
     </div>
     <div class="container">
