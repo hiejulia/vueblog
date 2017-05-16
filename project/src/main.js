@@ -7,6 +7,7 @@ import VeeValidate from 'vee-validate';
 // Import components
 import Register from './components/Register.vue';
 import Hello from './components/Hello.vue';
+import Home from './components/Home.vue';
 import Login from './components/Login.vue';
 
 
@@ -23,6 +24,7 @@ export var router = new Router({
 	mode: 'history',
 	routes: [
 		{ path: '/', component: Hello },
+    { path: '/home', component: Home },
 		// { path: '/users', component: Users, meta: { requiresAuth: true, requiresAdmin: true } },
 		{ path: '/register', component: Register, meta: { checksAuth: true } },
 		{ path: '/login', component: Login, meta: { checksAuth: true } },
@@ -62,7 +64,7 @@ router.beforeEach((to, from, next) => {
 			next()
 		} else {
 			next({
-				path: '/',
+				path: '/home',
 				query: { redirect: to.fullPath }
 			})
 		}
@@ -72,7 +74,7 @@ router.beforeEach((to, from, next) => {
 		// if not, redirect to login page.
 		if (auth.user.authenticated) {
 			next({
-				path: '/',
+				path: '/home',
 				query: { redirect: to.fullPath }
 			})
 		} else {

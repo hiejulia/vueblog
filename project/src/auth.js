@@ -17,7 +17,7 @@ export default {
 				self.user.authenticated = true;
 				location.reload();
 				if (self.user.role = 'regular') {
-					context.$router.push('/');				
+					context.$router.push('/home');				
 				}
 				else if (self.user.role = 'admin') {
 					context.$router.push('/users');				
