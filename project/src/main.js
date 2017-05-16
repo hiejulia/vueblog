@@ -35,7 +35,7 @@ export var router = new Router({
 	]
 });
 
-Vue.http.options.root = 'http://localhost:3000/api';
+Vue.http.options.root = 'http://localhost:3000';
 // console.log(auth.getAuthHeader());
 Vue.http.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('id_token');
 Vue.http.headers.common['Access-Control-Allow-Origin'] = '*';
