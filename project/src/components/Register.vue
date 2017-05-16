@@ -12,19 +12,20 @@
         <span v-show="errors.has('email')" class="alert-danger">{{ errors.first('email') }}</span>
       </div>
       <div class="form-group">
-        <label for="firstName">First Name</label>
+        <label for="firstName">Name</label>
         <input v-validate.initial data-rules="required" type="text" class="form-control" v-model="body.firstName" name="firstName" id="firstName" placeholder="John" data-as="First Name">
         <span v-show="errors.has('firstName')" class="alert-danger">{{ errors.first('firstName') }}</span>
       </div>
-      <div class="form-group">
-        <label for="lastName">Last Name</label>
-        <input v-validate.initial data-rules="required" data-as="Last Name" type="text" class="form-control" v-model="body.lastName" name="lastName" id="lastName" placeholder="Doe">
-        <span v-show="errors.has('lastName')" class="alert-danger">{{ errors.first('lastName') }}</span>
-      </div>
+      
       <div class="form-group">
         <label for="password">Password</label>
         <input v-validate.initial data-rules="required|min:6" name="password" type="password" class="form-control" v-model="body.password" id="password" placeholder="********">
         <span v-show="errors.has('password')" class="alert-danger">{{ errors.first('password') }}</span>
+      </div>
+      <div class="form-group">
+        <label for="password">Roles</label>
+        <input v-validate.initial data-rules="required|min:6" name="roles" type="text" class="form-control" v-model="body.roles" id="password">
+        <span v-show="errors.has('roles')" class="alert-danger">{{ errors.first('password') }}</span>
       </div>
       <div class="form-group">
         <label for="password2">Password Confirmation</label>

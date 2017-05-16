@@ -2,8 +2,8 @@
   <div>
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <h1 class="display-3">Vue.js Boilerplate</h1>
-        <p class="lead">Vue + Passport + Express + MongoDB</p>
+        <h1 class="display-3">BlogKIT</h1>
+        
       </div>
     </div>
     <div class="container">
