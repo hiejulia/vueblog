@@ -1,6 +1,6 @@
 # project
 
-> A Vue.js project
+> A Vue.js project for blogging platform 
 
 ## Build Setup
 

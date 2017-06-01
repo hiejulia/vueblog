@@ -1,4 +1,0 @@
-Function to add 
-+ Fetch from server with NodeJS
-+ Save in MongoDB
-+ Add edit/ sort / dashboard 
